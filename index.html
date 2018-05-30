@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
      <title>Lading Page</title>
-</head>    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script></head>    
 <body>
     
-    <form method="POST" action="index.php">
-        Nome: 
-        <input type="text" id="name" name="name" value="">
-        Email:
-        <input type="email"  id="email" name="email" value="">
-        <br><br>
-        Telefone: 
-        <input type="text"  id="telefone" name="telefone" value="">
-        Empresa: 
-        <input type="text"  id="empresa" name="empresa" value="">
-        <br><br> 
-        CEP: 
-        <input type="text" class="cep" name="cep" value="">
-        <br><br>
-        <button type="submit" >Enviar</button>
-    </form>
-    
-    <div>
+    <div style="margin: 2rem auto" class="container">
+        <h3 class="text-align">Formulário</h3>
+    <form method="POST" class="form-group" action="index.php">
+            <div class="form-group row">
+                <label for="example-text-input" class="col-form-label">Name</label>
+                <input class="form-control" type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group row">
+                <label for="example-email-input" class="col-form-label">Email</label>
+                    <input class="form-control" type="email" placeholder="example@example.com" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group row">
+                <label for="example-tel-input" class="col-form-label">Telephone</label>
+                    <input class="form-control" type="tel" placeholder="(00) 0000-0000" id="telefone" name="telefone" required>
+            </div>
+            
+            <div class="form-group row">
+                <label for="example-search-input" class="col-form-label">Empresa</label>
+                    <input class="form-control" type="search" placeholder="Nome da empresa" id="empresa" name="empresa" required>
+            </div>
+            
+            <div class="form-group row">
+                <label for="example-tel-input" class="col-form-label">CEP</label>
+                    <input type="text" value="" class="form-control cep-mask" id="cep" name="cep" required>
+            </div>
+            <div class="form-group row">
+                <button style="width: 100%" type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
