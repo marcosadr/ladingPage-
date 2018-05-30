@@ -53,17 +53,22 @@
     <div class="container">           
         <div class="card">
         <div class="card-header">
-        <h3>Dados</h3>
+            <h3>Dados</h3>
         </div>               
-                <address style="margin: 5px"><b>Name: </b><?php echo $name; ?></address>
-                <address style="margin: 5px"><b>Email: </b><?php echo $email; ?></address>
-                <address style="margin: 5px"><b>Telefone: </b><?php echo $telefone; ?></address>
-                <address style="margin: 5px"><b>Empresa: </b><?php echo $empresa; ?></address>
-                <address style="margin: 5px"><b>Endereço: </b><?php echo $response[endereco]; ?></address>
-                <address style="margin: 5px"><b>Bairro: </b><?php echo $response[bairro]; ?></address>
-                <address style="margin: 5px"><b>Cidade: </b><?php echo $response[cidade]; ?></address>
-                <address style="margin: 5px"><b>CEP: </b><?php echo $response[cep]; ?></address>
-                <address style="margin: 5px"><b>UF: </b><?php echo $response[uf]; ?></address>
+            <address style="margin: 5px"><b>Nome: </b><?php echo $name; ?></address>
+            <address style="margin: 5px"><b>Email: </b><?php echo $email; ?></address>
+            <address style="margin: 5px"><b>Telefone: </b><?php echo $telefone; ?></address>
+            <address style="margin: 5px"><b>Empresa: </b><?php echo $empresa; ?></address>
+            <hr/>
+            <?php if($response[endereco] == true) { ?>
+            <address style="margin: 5px"><b>Endereço: </b><?php echo $response[endereco]; ?></address>
+            <address style="margin: 5px"><b>Bairro: </b><?php echo $response[bairro]; ?></address>
+            <address style="margin: 5px"><b>Cidade: </b><?php echo $response[cidade]; ?></address>
+            <address style="margin: 5px"><b>CEP: </b><?php echo $response[cep]; ?></address>
+            <address style="margin: 5px"><b>UF: </b><?php echo $response[uf]; ?></address>
+            <?php }else{ ?>
+                <address style="margin: 5px"><b>Endereço não encontrado! </b></address>
+           <?php } ?>
         </div>
     <?php
     }
